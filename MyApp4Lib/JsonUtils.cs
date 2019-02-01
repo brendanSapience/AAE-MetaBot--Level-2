@@ -1,4 +1,5 @@
-﻿using RestSharp.Deserializers;
+﻿
+using RestSharp.Deserializers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace MyApp4Lib
 
             response.Content = JsonResp;
 
-            RestSharp.Deserializers.JsonDeserializer deserial = new JsonDeserializer();
+            JsonDeserializer deserial = new JsonDeserializer();
 
             StdJsonResponseForCurrCheck x = deserial.Deserialize<StdJsonResponseForCurrCheck>(response);
             String Resp = "";
